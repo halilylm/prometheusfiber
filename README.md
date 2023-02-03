@@ -11,7 +11,7 @@ go get github.com/halilylm/prometheusfiber@v0.1.0
 
 ## Usage/Examples
 
-Each option is optional. Use what you need, if you don't use, it will fall back to default urls.
+Each option is optional. Use what you need, if you don't use, it will fall back to default values.
 ```go
 app := fiber.New()
 middleware := prometheusfiber.NewPrometheus(
