@@ -1,4 +1,14 @@
 
+# Prometheus Middleware
+
+Prometheus middleware for Fiber v2.
+
+## Installation
+
+```bash
+go get github.com/halilylm/prometheusfiber@v0.1.0
+```
+
 ## Usage/Examples
 
 Each option is optional. Use what you need, if you don't use, it will fall back to default urls.
@@ -25,12 +35,13 @@ middleware := prometheusfiber.NewPrometheus(
 // collect metrics on main server
 app.Use(middleware.Middleware)
 
-// publish metrics on metric server.
+// publisher metrics on metric server.
 middleware.SetMetricsPath(metricApp)
 
-// run metric app on different server.
 go func() { metricApp.Listen(":9090") }()
 
 // run main application.
 app.Listen(":8080")
 ```
+
+    
